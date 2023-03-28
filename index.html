@@ -1,0 +1,523 @@
+ <!DOCTYPE html>
+ <html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/style.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/queries.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type="text/css">
+        <link rel="icon" type="img/png" href="vendors/images/logo/chatbot (1).png" />
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="vendors/css/swiper-bundle.min.css">
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <title>My Chatbot</title> 
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="main-nav">
+                    <div class="row">
+                        <img src="vendors/images/logo/Logo_RGB_Blue.png" alt="Chat bot" class="logo"  onmouseover="closeAll()"> 
+                        <ul class="leftNav">
+                            <li onmouseover="showProduct()"><a href="#">Product
+                                <i class="ion-chevron-down dropdown-icon"></i>
+                            </a></li>
+                            <li onmouseover="closeAll()"><a href="#">Pricing</a></li>
+                            <li onmouseover="showIntegrations()"><a href="#">Integrations
+                                <i class="ion-chevron-down dropdown-icon"></i>
+                            </a></li>
+                            <li onmouseover="showResources()"><a href="#">Resources
+                                <i class="ion-chevron-down dropdown-icon"></i>
+                            </a></li>
+                        </ul> 
+                        <ul class="rightNav"  onmouseover="closeAll()">
+                            <a class="btn btn-ghost" href="#">Login</a>
+                            <a class="btn btn-full" href="#">Sign up free</a>
+                        </ul> 
+                        <ul class="dropdown-menu">
+                            <!-- <li>
+                                <label>Menu</label>
+                            </li> -->
+                            <li>
+                                <img src="vendors/images/menu/menu.png" class="menu-icon" onclick="showMenu()">
+                            </li>
+                            
+                        </ul>
+
+                        
+                    </div>
+                    <div class="product" id="product" onmouseover="showProduct()" onmouseout="closeProduct()">
+                       
+                        <div class="col span-1-of-2 product-list">
+                            <ul class="first-column">
+                                <li>Benefits
+                                    <p>See what you can gain</p>
+                                </li>
+                                <li>Features
+                                    <p>Everything you need</p>
+                                </li>
+                                <li>Visual Builder
+                                    <p>Create your ideal chatbot</p>
+                                </li>
+                                <li>Dynamic Responses
+                                    <p>Boost customer engagement</p>
+                                </li>
+                                <li>Artificial Intelligence
+                                    <p>Improve with every chat</p>
+                                </li>
+                                <li>Analytics
+                                    <p>Make data-backed decisions</p>
+                                </li>
+                                <li>Connect
+                                    <p>Be where your customers are</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col span-1-of-2 product-list">
+                            <ul>
+                                <label>Solutions</label>
+                                <li>Marketing</li>
+                                <li>Sales</li>
+                                <li>Support</li>
+                                <li>Education</li>
+                                <li>Enterprise</li>
+                                <li>Healthcare</li>
+                            </ul>
+                        </div>
+                    </div>  
+                    <div class="product integrations" id="integrations" onmouseover="showIntegrations()" onmouseout="closeIntegrations()">
+                            <ul>
+                                <li>ChatWidget
+                                    <p>See what you can gain</p>
+                                </li>
+                                <li>LiveChat
+                                    <p>Everything you need</p>
+                                </li>
+                                <li>HelpDesk
+                                    <p>Create your ideal chatbot</p>
+                                </li>
+                                <li>Facebook Messenger
+                                    <p>Boost customer engagement</p>
+                                </li>
+                                <li>Shopify
+                                    <p>Improve with every chat</p>
+                                </li>
+                                <li>Slack
+                                    <p>Make data-backed decisions</p>
+                                </li>
+                                <li>WordPress
+                                    <p>Be where your customers are</p>
+                                </li>
+                            </ul>
+                    </div>  
+                    <div class="product" id="resources" onmouseover="showResources()" onmouseout="closeResources()">
+                       
+                        <div class="col span-1-of-2 product-list">
+                            <ul class="first-column">
+                                <li>Help Center</li>
+                                <li>Templates</li>
+                                <li>API & Developers</li>
+                                <li>Partner Program</li>
+                                <li>System Status</li>
+                            </ul>
+                        </div>
+                        <div class="col span-1-of-2 product-list">
+                            <ul>
+                                <label>Learn</label>
+                                <li>ChatBot Academy</li>
+                                <li>ChatBot Best Practices</li>
+                                <li>Blog</li>
+                            </ul>
+                        </div>
+                    </div> 
+                </div>
+
+                
+
+                
+              
+                
+            </nav>
+
+            <div class="main-content" id="main-content">
+                <div class="chatbot-image">
+                    <img src="vendors/images/background/Chatbot-cuate.svg" alt="">
+                </div>
+                <div class="hero-text-box">
+                    <h1>With ChatBot,<br>automating customer<br>service is a breeze</h1>
+                    <p>An all-in-one platform to build and launch<br>conversational chatbots without coding.</p>
+                    <div class="sign-up-box">
+                        <div class="col span-7-of-12">
+                            <input class="sign-up-input" type="email" name="email" id="email" placeholder="Your email" required>
+                        </div>
+                        <a class="btn btn-full" href="#">Sign up free</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vertical-menu" onmouseleave="closeDropdowns()" id="vertical-menu">
+                <div class="main-items">
+                    <a href="#" onmouseover="dropProduct()">Product<i class="ion-chevron-down dropdown-icon"></i></a>
+                    <div class="items">
+                        <div class="product-items" id="dropdown-product">
+                            <a href="#">Benefits</a>
+                            <a href="#">Features</a>
+                            <a href="#">Visual Builder</a>
+                            <a href="#">Dynamic Responses</a>
+                            <a href="#">Artificial Intelligence</a>
+                            <a href="#">Analytics</a>
+                            <a href="#">Connect</a>
+                            <label>SOLOUTIONS</label>
+                            <p>Marketing</p>
+                            <p>Sales</p>
+                            <p>Support</p>
+                            <p>Education</p>
+                            <p>Enterprise</p>
+                            <p>Healthcare</p>
+                        </div>
+                    </div>
+                    
+                    <a href="#" id="dropdown-pricing" onmouseover="closeDropdowns()">Pricing</a>
+                    <a href="#" onmouseover="dropIntegrations()">Integrations<i class="ion-chevron-down dropdown-icon"></i></a>
+                    <div class="items">
+                        <div class="integrations-items" id="dropdown-integrations">
+                            <a href="#">Chat Widget</a>
+                            <a href="#">LiveChat</a>
+                            <a href="#">HelpDesk</a>
+                            <a href="#">Facebook Messenger</a>
+                            <a href="#">Shopify</a>
+                            <a href="#">Slack</a>
+                            <a href="#">WordPress</a>
+                            <a href="#">See all integrations</a>
+                        </div>
+                    </div>
+                    
+                    <a href="#" onmouseover="dropResources()">Resources<i class="ion-chevron-down dropdown-icon"></i></a>
+                    <div class="items">
+                        <div class="resources-items" id="dropdown-resources">
+                            <a href="#">Help Center</a>
+                            <a href="#">Templates</a>
+                            <a href="#">API & Developers</a>
+                            <a href="#">Partner Program</a>
+                            <label>LEARN</label>
+                            <p>Chatbot Academy</p>
+                            <p>Chatbot Best Practices</p>
+                            <p>Blog</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </header>
+
+        <section class="section-features">
+            <div class="row">
+                <div class="box">
+                    <img src="vendors/images/card-images/marketing.png" alt="">
+                    <h3><strong>Power up your marketing</strong></h3>
+                    <div class="card-text">
+                        <div class="card-info">
+                            <div class="checkmark">
+                                <i class="ion-checkmark-round"></i>
+                            </div>
+                            <div class="info">
+                                <span>Personalize your customer experience.</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="checkmark">
+                                <i class="ion-checkmark-round"></i>
+                            </div>
+                            <div class="info">
+                                <span>Engage prospects and customers across multiple communications channels.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="links">
+                        <a href="#">Benefits for marketing<i class="ion-arrow-right-c icon-small orange"></i></a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="vendors/images/card-images/sale.png"></img>
+                    <h3>Superharge your sales</h3>
+                    <div class="card-text">
+                        <div class="card-info">
+                            <div class="checkmark">
+                                <i class="ion-checkmark-round"></i>
+                            </div>
+                            <div class="info">
+                                <span>Scale your efforts without increasing employee headcount.</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="checkmark">
+                                <i class="ion-checkmark-round"></i>
+                            </div>
+                            <div class="info">
+                                <span>Generate and qualify leads automatically.</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="links">
+                        <a href="#">Benefits for sales<i class="ion-arrow-right-c icon-small orange"></i></a>
+                    </div>
+                    
+                </div>
+                
+                <div class="box">
+                    <img src="vendors/images/card-images/support.png"></img>
+                    <h3>Optimize your support</h3>
+                    <div class="card-text">
+                        <div class="card-info">
+                            <div class="checkmark">
+                                <i class="ion-checkmark-round"></i>
+                            </div>
+                            <div class="info">
+                                <span>Keep your customer support going after hours.</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="checkmark">
+                                <i class="ion-checkmark-round"></i>
+                            </div>
+                            <div class="info">
+                                <span>Improve resolution times.</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="links">
+                        <a href="#">Benefits for support<i class="ion-arrow-right-c icon-small orange"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="gray-image">
+                <img src="curvy.png">
+            </div>    -->
+        </section>
+
+        <section class="section-steps">
+            <div class="row">
+                <h1>Get started with templates</h1>
+                <p>
+                    Build your first AI chatbots with ready-to-use templates. Customize them to fit your business needs, and bring your chatbots to life within minutes.
+                </p>
+            </div>
+            
+            <div class="slide-container swiper test">
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper mine">
+                    <div class="card swiper-slide myCard">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="vendors/images/slider/call-scheduling-icon.png" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Call<br>Scheduling<br>Template</h3>
+                            <div class="links">
+                                <a href="#">More details<i class="ion-arrow-right-c icon-small orange"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide myCard">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="vendors/images/slider/covid-icon.png" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Covid-19 Risk<br>Assesment<br>Template</h3>
+                            <div class="links">
+                                <a href="#">More details<i class="ion-arrow-right-c icon-small orange"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide myCard">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="vendors/images/slider/HD-Ticket.png" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Create<br>HelpDesk<br>Tickets</h3>
+                            <div class="links">
+                                <a href="#">More details<i class="ion-arrow-right-c icon-small orange"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide myCard">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="vendors/images/slider/customer-satisfaction-icon.png" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Customer<br>Satisfaction<br>Template</h3>
+                            <div class="links">
+                                <a href="#">More details<i class="ion-arrow-right-c icon-small orange"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide myCard">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="vendors/images/slider/customer-service-icon.png" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Customer<br>Service<br>Template</h3>
+                            <div class="links">
+                                <a href="#">More details<i class="ion-arrow-right-c icon-small orange"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide myCard">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="vendors/images/slider/discount-icon.png" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Discount<br>Template<br><br></h3>
+                            <div class="links">
+                                <a href="#">More details<i class="ion-arrow-right-c icon-small orange"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide myCard">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="vendors/images/slider/ecommerce-icon.png" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Ecommerce<br>Template<br><br></h3>
+                            <div class="links">
+                                <a href="#">More details<i class="ion-arrow-right-c icon-small orange"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide myCard">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="vendors/images/slider/FAQ_bot_v1-(1).png" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>FAQ<br>Template<br><br></h3>
+                            <div class="links">
+                                <a href="#">More details<i class="ion-arrow-right-c icon-small orange"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide myCard">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="vendors/images/slider/halloween-icon.png" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Halloween<br>Template<br><br></h3>
+                            <div class="links">
+                                <a href="#">More details<i class="ion-arrow-right-c icon-small orange"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide myCard">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="vendors/images/slider/lead-generation-icon.png" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Lead<br>Generation<br>Template</h3>
+                            <div class="links">
+                                <a href="#">More details<i class="ion-arrow-right-c icon-small orange"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+            </div>
+
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        </section>
+
+
+
+
+        <footer>
+            <div class="row">
+                <div class="col span-1-of-2">
+                    <ul class="footer-nav">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">iOS App</a></li>
+                        <li><a href="#">Android App</a></li>
+                    </ul>
+                </div>
+                <div class="col span-1-of-2">
+                    <ul class="social-links">
+                        <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                        <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                        <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                        <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </footer>
+        
+    </body>
+    <!-- Swiper JS -->
+    <script src="vendors/js/swiper-bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="vendors/js/script.js"></script>
+ </html> 
+
+

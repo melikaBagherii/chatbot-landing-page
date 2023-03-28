@@ -1,0 +1,162 @@
+
+
+/* big tablets to 1200px (widths smaller than the 1140px row) */
+/* 1024 to 1200 */
+@media only screen and (max-width:1200px){
+    /* login and sign up buttons */
+    .btn:link,
+    .btn:visited,
+    input[type=submit]{
+        padding: 7.5px 20px;
+        font-size: 80%;
+    }
+
+    .row{ padding: 0 2%; }
+
+    /* dropdown list */
+    .leftNav{
+        font-size: 90%; 
+    }
+
+    h1{
+        font-size: 250%;
+    }
+    .info{
+        font-size: 85%;
+    }
+    .icon-small{
+        width: 20px;
+        margin-right: 5px;
+        margin-top: -3px;
+    }
+
+    .row h1{
+        font-size: 250%;
+    }
+
+    .section-steps .row{
+        margin-left: 10%;
+    }
+    .section-steps p{
+        font-size: 100%;
+    }
+
+    #integrations{
+        margin-left: 40%;
+    }
+    
+    
+    
+    
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1154px) {
+	#resources{
+        margin-left: 48%;
+        width: 34%;
+    }
+}
+
+/*small tablets to big tablets: form 767px to 1023px */
+@media only screen and (max-width:1023px){
+    body {font-size: 18px;}
+    section {padding: 60px 0;}
+
+    .btn-full:link,
+    .btn-full:visited,
+    input[type=submit]{ 
+        margin-right: 0px;
+        margin-left: 5px;
+        margin-top: 5.5px;
+    }
+
+    .btn:link,
+    .btn:visited,
+    input[type=submit]{
+        padding: 7.5px 7px;
+        font-size: 80%;
+    }
+
+    .logo{
+        height: 30px;
+        margin-top: 50px;
+    }
+    .leftNav li{
+        margin-left: 30px;
+    }
+    h1{
+        margin-top: 34%;
+        font-size: 220%;
+    }
+    .hero-text-box p{
+        font-size: 93%;
+    }
+
+    input[type=text],
+    input[type=email],
+    select,
+    textarea{
+        padding: 4.5px 7px;
+        margin-top: 2.5px;
+    }
+
+    .info{
+        font-size: 90%;
+    }
+    .icon-small{
+        margin-top: -10px;
+    }
+    .card-content h3{
+        font-size: 125%;
+    }
+    .card{
+        margin-bottom: 15px;
+    }
+    .row h1{
+        margin-top: 5%;
+        margin-bottom: 4%;
+    }
+
+    .section-steps p{
+        margin-bottom: 9%;
+    }
+
+    .footer-nav li,
+    .social-links li{
+        margin-right: 15px;
+    }
+    
+    .leftNav,
+    .rightNav{
+        display: none;
+    }
+    .dropdown-menu{
+        display: inline-block;
+    }
+    .dropdown-menu li{
+        display: inline-block;
+    }
+    .box a{
+        font-size: 90%;
+    }
+    
+}
+
+/*small phones to small tablets: form 481px to 767px */
+@media only screen and (max-width:767px){
+    .box{
+        width: 100%;
+    }
+
+    .section-features .row{
+        display: block;
+        
+    }
+}
+
+
+
+/*small phones: form 0 to 480px */
+@media only screen and (max-width:480px){
+    
+}

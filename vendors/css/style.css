@@ -209,12 +209,13 @@ a:active{
 .chatbot-image{
     width: 50%;
     float: right;
-    margin-top: 3%;
-    
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .chatbot-image img{
-    max-width: 600px;
+    max-width: 100%;
     height: auto;
 }
 .gray-image{
@@ -972,8 +973,10 @@ footer p{
 
 .menu-icon{
     width: 30px;
+    display: block;
     /* margin-left: 10px; */
 }
+
 
 .dropdown-menu{
     display: none;
@@ -986,9 +989,12 @@ footer p{
 } */
 
 
-/* .main-content{
-    display: none;
-} */
+.main-content{
+    height: 85%;
+}
+nav{
+    height: 15%;
+}
 
 .vertical-menu{
     background-color:rgba(240, 237, 237, 0.771);

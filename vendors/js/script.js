@@ -110,12 +110,14 @@ function showMenu(){
   if(document.getElementById('main-content').style.display == "none"){
     document.getElementById('vertical-menu').style.display = "none";
     document.getElementById('main-content').style.display = "block";
+    document.getElementById('menu-img').src = "vendors/images/menu/menu.png";
   }
   else{
     document.getElementById('main-content').style.display = "none";
     document.getElementById('vertical-menu').style.display = "block";
+    document.getElementById('menu-img').src = "vendors/images/menu/close.png";
   }
   
-  
 }
+
 

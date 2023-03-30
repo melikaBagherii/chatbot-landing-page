@@ -260,5 +260,34 @@
 
 /*small phones: form 0 to 480px */
 @media only screen and (max-width:480px){
+    .hero-text-box .sign-up-box{
+        /* margin: 0%; */
+        margin-left: 5%;
+    }
+    .span-7-of-12 {
+        width: 70%;
+    }
+    .sign-up-box .btn-full{
+        margin-top: 2px;
+    }
+    .span-1-of-2 {
+        width: 50%;
+    }
+    .span-1-of-2 .social-links{
+        text-align: right;
+    }
+    
+    
     
 }
+
+@media only screen and (max-width:352px){
+    .span-7-of-12 {
+        width: 60%;
+    }
+
+    .social-links{
+        margin-right: -40%;
+    }
+}
+
